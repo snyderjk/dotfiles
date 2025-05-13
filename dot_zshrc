@@ -45,6 +45,11 @@ if command -v mise > /dev/null ; then
 fi
 
 
+# ~~~~~~~~~~~~~~~ TMUX ~~~~~~~~~~~~~~~~~~~~~~~~
+
+if [ "$TMUX" = ""]; then tmux; fi
+
+
 # ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
