@@ -15,9 +15,7 @@ if [ ! -d "$HOME/.zsh/pure" ]; then
 fi
 
 if ! command -v chezmoi >/dev/null; then
-	sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:snyderjk/dotfiles.git
+  sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:snyderjk/dotfiles.git
 fi
-
-sudo apt update && sudo apt install vim -y
 
 exit 0
