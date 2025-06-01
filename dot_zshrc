@@ -47,8 +47,11 @@ fi
 
 # ~~~~~~~~~~~~~~~ TMUX ~~~~~~~~~~~~~~~~~~~~~~~~
 
-if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
-  tmux attach-session -t dev || tmux new-session -s dev
+#if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+#  tmux attach-session -t dev || tmux new-session -s dev
+#fi
+if command -v tmux &>/dev/null && [ -z "$TMUX" ] && [ -n "$PS1" ]; then
+  exec tmux
 fi
 
 # ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -88,3 +91,12 @@ if command -v lsd > /dev/null ; then
   alias lla='ls -lgha'
   alias lt='ls --tree'
 fi
+
+# ~~~~~~~~~~~~~~ Zsh Tools ~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# Download Znap, if it's not there yet.
+[[ -r ~/Packages/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/Packagess/znap
+source ~/Packages/znap/znap.zsh  # Start Znap
