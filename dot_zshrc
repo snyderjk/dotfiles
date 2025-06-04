@@ -1,13 +1,13 @@
-# Prevent non-interactive shells (like Rancher Desktop) from breaking
-[[ $- != *i* ]] && return
+# # Prevent non-interactive shells (like Rancher Desktop) from breaking
+# [[ $- != *i* ]] && return
 
-# PATH update
-export PATH="$HOME/.rd/bin:$PATH"
+# # PATH update
+# export PATH="$HOME/.rd/bin:$PATH"
 
-# Launch tmux only in real terminals
-if [[ -z "$TMUX" ]] && command -v tmux &>/dev/null; then
-  exec tmux
-fi
+# # Launch tmux only in real terminals
+# if [[ -z "$TMUX" ]] && command -v tmux &>/dev/null; then
+#   exec tmux
+# fi
 
 
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
