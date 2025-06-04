@@ -100,5 +100,5 @@ fi
 # Download Znap, if it's not there yet.
 [[ -r ~/Packages/znap/znap.zsh ]] ||
     git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/Packagess/znap
+        https://github.com/marlonrichert/zsh-snap.git ~/Packages/znap
 source ~/Packages/znap/znap.zsh  # Start Znap
