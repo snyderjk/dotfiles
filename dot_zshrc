@@ -1,0 +1,4 @@
+export ZK_NOTEBOOK_DIR=$HOME/Documents/vaults/personal/
+export PATH="$PATH:/usr/local/bin"
+
+export TALOSCONFIG=~/Repos/homelab/talos-bootstrap/_out/talosconfig
